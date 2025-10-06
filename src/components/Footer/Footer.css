@@ -1,0 +1,26 @@
+footer {
+            grid-area: footer;
+            background-color: rgba(5, 5, 16, 0.9);
+            padding: 1.5rem;
+            border-top: 1px solid var(--neon-green);
+            box-shadow: 0 0 15px rgba(0, 255, 157, 0.3);
+            text-align: center;
+            backdrop-filter: blur(5px);
+            position: relative;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, 
+                transparent, 
+                var(--neon-green), 
+                var(--neon-blue), 
+                var(--neon-purple), 
+                transparent);
+            animation: laser-sweep 4s linear infinite;
+        }

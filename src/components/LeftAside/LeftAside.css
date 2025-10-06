@@ -1,0 +1,78 @@
+.aside-left {
+            grid-area: left;
+            background-color: rgba(5, 5, 16, 0.7);
+            padding: 1.5rem 1rem;
+            border-right: 1px solid var(--neon-purple);
+            box-shadow: 0 0 15px rgba(189, 0, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+.left-aside::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: -1px;
+            width: 2px;
+            background: linear-gradient(to bottom, 
+                transparent, 
+                var(--neon-purple), 
+                transparent);
+            animation: pulse 2s infinite;
+        } 
+
+        .panel-title {
+            font-family: 'Orbitron', sans-serif;
+            color: var(--neon-purple);
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .panel-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-purple), transparent);
+        }
+        
+        .button-aside {
+            
+            padding: 0.8rem 1rem;
+            margin: 10px;
+            border-radius: 4px;
+            background: rgba(0, 243, 255, 0.1);
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .button-aside::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(0, 243, 255, 0.4), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .button-aside:hover {
+            background: rgba(0, 243, 255, 0.2);
+            transform: translateX(5px);
+            box-shadow: 0 0 10px var(--neon-blue);
+        }
+        
+        .button-aside:hover::before {
+            left: 100%;
+        }
