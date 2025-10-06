@@ -1,4 +1,4 @@
-# Mi Aplicación React
+# Mi Proyecto del Ejercicio 6 de React
 
 Una aplicación web moderna desarrollada con React y Vite, que presenta un diseño de layout responsivo con elementos flotantes interactivos.
 
